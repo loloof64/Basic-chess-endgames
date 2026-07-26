@@ -10,7 +10,6 @@ jobs:
     uses: ./.github/workflows/appimage.yml
 
   run-windows:
-    needs: run-linux
     uses: ./.github/workflows/windows.yml
     secrets: inherit
 
