@@ -196,7 +196,7 @@ class ChessHistory extends StatelessWidget {
 
 class _HistoryNavigationButton extends StatelessWidget {
   final double size;
-  final IconData icon;
+  final FaIconData icon;
   final void Function() onClick;
 
   const _HistoryNavigationButton({

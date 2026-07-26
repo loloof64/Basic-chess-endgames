@@ -13,7 +13,7 @@ class PlayerTurnWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Icon(
+    return FaIcon(
       isWhiteTurn ? FontAwesomeIcons.square : FontAwesomeIcons.solidSquare,
       size: size,
     );

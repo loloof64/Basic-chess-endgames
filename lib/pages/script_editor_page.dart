@@ -1977,35 +1977,27 @@ class GameGoalEditorWidget extends HookWidget {
                   ),
                 ),
               )
-            : Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  ListTile(
-                    title: Text(t.script_editor_page.should_win),
-                    leading: Radio<bool>(
-                      groupValue: shouldWin.value,
-                      value: true,
-                      onChanged: (newValue) {
-                        if (newValue == null) return;
-                        shouldWin.value = newValue;
-                        onChanged(newValue);
-                      },
+            : RadioGroup<bool>(
+                groupValue: shouldWin.value,
+                onChanged: (newValue) {
+                  if (newValue == null) return;
+                  shouldWin.value = newValue;
+                  onChanged(newValue);
+                },
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ListTile(
+                      title: Text(t.script_editor_page.should_win),
+                      leading: const Radio<bool>(value: true),
                     ),
-                  ),
-                  ListTile(
-                    title: Text(t.script_editor_page.should_draw),
-                    leading: Radio<bool>(
-                      groupValue: shouldWin.value,
-                      value: false,
-                      onChanged: (newValue) {
-                        if (newValue == null) return;
-                        shouldWin.value = newValue;
-                        onChanged(newValue);
-                      },
+                    ListTile(
+                      title: Text(t.script_editor_page.should_draw),
+                      leading: const Radio<bool>(value: false),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
       ],
     );
