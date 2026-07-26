@@ -2,7 +2,7 @@ name: basicchessendgamestrainer
 description: Generate a chess position from your criterias.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -16,10 +16,10 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 4.4.1+20
+version: 4.4.2+21
 
 environment:
-  sdk: '>=3.0.5 <4.0.0'
+  sdk: ">=3.0.5 <4.0.0"
   flutter: 3.29.0
 
 # Dependencies specify other packages that your package needs in order to work.
@@ -31,9 +31,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_localizations: 
+  flutter_localizations:
     sdk: flutter
-
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -48,7 +47,7 @@ dependencies:
   flutter_riverpod: ^2.6.1
   font_awesome_flutter: ^11.0.0
   flex_color_scheme: ^8.0.1
-  logger: ^2.5.0 
+  logger: ^2.5.0
   http: ^1.3.0
   slang: ^4.4.1
   slang_flutter: ^4.4.1
@@ -134,8 +133,8 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   fonts:
-      - family: Free Serif
-        fonts:
+    - family: Free Serif
+      fonts:
         - asset: assets/fonts/FreeSerif.ttf
 flutter_launcher_icons:
   android: "launcher_icon"

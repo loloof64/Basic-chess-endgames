@@ -1,1 +1,2 @@
-* Handling missing internet connection in samples loading page.
+- Upgraded packages
+- Changed deprecated Flutte code
