@@ -1,52 +1,52 @@
 # appimage-builder recipe see https://appimage-builder.readthedocs.io for details
 version: 1
 script:
- - rm -rf AppDir || true
- - cp -r build/linux/x64/release/bundle AppDir
- - mkdir -p AppDir/usr/share/icons/hicolor/256x256/apps/
- - cp icon.png AppDir/usr/share/icons/hicolor/256x256/apps/
- - mkdir -p AppDir/usr/share/applications/
- - cp Basic_chess_endgames.desktop AppDir/usr/share/applications/
- - mkdir -p AppDir/usr/share/metainfo
- - cp Basic_chess_endgames.metainfo.xml AppDir/usr/share/metainfo/Basic_chess_endgames.metainfo.xml
+  - rm -rf AppDir || true
+  - cp -r build/linux/x64/release/bundle AppDir
+  - mkdir -p AppDir/usr/share/icons/hicolor/256x256/apps/
+  - cp icon.png AppDir/usr/share/icons/hicolor/256x256/apps/
+  - mkdir -p AppDir/usr/share/applications/
+  - cp Basic_chess_endgames.desktop AppDir/usr/share/applications/
+  - mkdir -p AppDir/usr/share/metainfo
+  - cp Basic_chess_endgames.metainfo.xml AppDir/usr/share/metainfo/Basic_chess_endgames.metainfo.xml
 AppDir:
   path: ./AppDir
   app_info:
     id: com.loloof64.basic_chess_endgames
     name: BasicChessEndgames
     icon: icon
-    version: 4.4.1
+    version: 4.4.3
     exec: basicchessendgamestrainer
     exec_args: $@
   apt:
     arch: amd64
     allow_unauthenticated: true
     sources:
-    - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal main restricted
-    - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted
-    - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal universe
-    - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-updates universe
-    - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal multiverse
-    - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-updates multiverse
-    - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse
-    - sourceline: deb http://security.ubuntu.com/ubuntu focal-security main restricted
-    - sourceline: deb http://security.ubuntu.com/ubuntu focal-security universe
-    - sourceline: deb http://security.ubuntu.com/ubuntu focal-security multiverse
+      - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal main restricted
+      - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted
+      - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal universe
+      - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-updates universe
+      - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal multiverse
+      - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-updates multiverse
+      - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse
+      - sourceline: deb http://security.ubuntu.com/ubuntu focal-security main restricted
+      - sourceline: deb http://security.ubuntu.com/ubuntu focal-security universe
+      - sourceline: deb http://security.ubuntu.com/ubuntu focal-security multiverse
     include:
-    - libgtk-3-0
-    - librsvg2-common
+      - libgtk-3-0
+      - librsvg2-common
     exclude:
-    - humanity-icon-theme
-    - hicolor-icon-theme
-    - adwaita-icon-theme
-    - ubuntu-mono
+      - humanity-icon-theme
+      - hicolor-icon-theme
+      - adwaita-icon-theme
+      - ubuntu-mono
   files:
     exclude:
-    - usr/share/man
-    - usr/share/doc/*/README.*
-    - usr/share/doc/*/changelog.*
-    - usr/share/doc/*/NEWS.*
-    - usr/share/doc/*/TODO.*
+      - usr/share/man
+      - usr/share/doc/*/README.*
+      - usr/share/doc/*/changelog.*
+      - usr/share/doc/*/NEWS.*
+      - usr/share/doc/*/TODO.*
   runtime:
     env:
       GDK_BACKEND: x11

@@ -1,7 +1,11 @@
+## 4.4.3
+
+- improved workflow for github action
+
 ## 4.4.2
 
 - Upgraded packages
-- Changed deprecated Flutte code
+- Changed deprecated Flutter code
 
 ## 4.4.1
 

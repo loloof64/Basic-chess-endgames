@@ -1,2 +1,1 @@
-- Upgraded packages
-- Changed deprecated Flutte code
+- improved workflow for github action
