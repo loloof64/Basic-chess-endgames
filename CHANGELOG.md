@@ -1,3 +1,7 @@
+## 4.4.4
+
+- improved workflow for github action
+
 ## 4.4.3
 
 - improved workflow for github action
